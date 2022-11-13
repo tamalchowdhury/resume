@@ -2,11 +2,19 @@
   --button-bg: #239dff;
   --button-hover-bg: #0774cc;
   --border-bg: #212842;
+  --info-bg: #fff2cc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
   color: #333;
+  line-height: 1.3;
 }
 
 a {
@@ -67,4 +75,45 @@ a {
 
 .button:hover {
   background: var(--button-hover-bg);
+}
+
+.mobile__info {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile__info {
+    display: block;
+    background: var(--info-bg);
+    padding: 10px;
+    margin-block-end: 1rem;
+  }
+  .wrapper {
+    width: 100%;
+  }
+
+  .call__to__action {
+    display: grid;
+  }
+
+  .button {
+    margin-block-end: 1rem;
+  }
+
+  .button,
+  .copy__clipboard,
+  .pdf__section {
+    font-size: 1.5rem;
+  }
+
+  .pdf__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
