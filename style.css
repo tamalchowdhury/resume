@@ -1,4 +1,5 @@
 :root {
+  --button-bg-light: #d9e8f3;
   --button-bg: #239dff;
   --button-hover-bg: #0774cc;
   --border-bg: #212842;
@@ -15,6 +16,8 @@ body {
   font-family: Arial, sans-serif;
   color: #333;
   line-height: 1.3;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -81,6 +84,44 @@ a {
   display: none;
 }
 
+/* for the whole background */
+#menu {
+  background-image: linear-gradient(var(--button-bg-light), #fff);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.menu a {
+  padding: 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: var(--button-bg-light);
+  text-decoration: underline;
+}
+
+/* .menu a:first-child {
+  padding-inline-start: 0;
+} */
+
+.menu .item {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.menu .subline {
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
 @media screen and (max-width: 800px) {
   body {
     margin: 0;
@@ -95,6 +136,10 @@ a {
   }
   .wrapper {
     width: 100%;
+  }
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .call__to__action {
