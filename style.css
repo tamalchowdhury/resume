@@ -72,13 +72,34 @@ a {
   display: inline-block;
   margin-block-end: 5px;
 }
-
+/tamalchowdhury
 .button:hover {
   background: var(--button-hover-bg);
 }
 
 .mobile__info {
   display: none;
+}
+
+.menu a {
+  padding: 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu a:first-child {
+  padding-inline-start: 0;
+}
+
+.menu .item {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.menu .subline {
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 @media screen and (max-width: 800px) {
